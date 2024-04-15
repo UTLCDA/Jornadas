@@ -1,0 +1,117 @@
+﻿@model IEnumerable<Jornadas.Models.Jornada>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@using (Html.BeginForm("Index", "Jornadas", FormMethod.Get))
+{
+    <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+        <input type="submit" value="Filter">
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IdLiga)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.jornada1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipoLocal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.equipoVisitante)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Hora)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Resultado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Empate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Colocada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LineaDinero)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Momio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ganancia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GananciaTotal)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdLiga)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.jornada1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.equipoLocal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.equipoVisitante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resultado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Colocada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LineaDinero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Momio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ganancia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GananciaTotal)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.id })
+            </td>
+        </tr>
+    }
+
+</table>

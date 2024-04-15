@@ -1,0 +1,122 @@
+﻿@model Jornadas.Models.Jornada
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jornada</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdLiga)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdLiga)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.jornada1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.jornada1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipoLocal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipoLocal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.equipoVisitante)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.equipoVisitante)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resultado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Colocada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Colocada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LineaDinero)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LineaDinero)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Momio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Momio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ganancia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ganancia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GananciaTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GananciaTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
